@@ -1,0 +1,175 @@
+/* Palette : Rouge (#D52B1E), Or (#FFC72C), Gris (#333) */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../images/bg_pattern.gif') repeat #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+#container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    min-height: 90vh; /* Force la hauteur */
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- HEADER --- */
+#header {
+    background-color: #333;
+}
+
+#banner {
+    background-image: url('../images/grande_muraille_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#banner h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+    background-color: rgba(213, 43, 30, 0.7); /* Rouge transparent */
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+#top-menu {
+    background-color: #D52B1E; /* Rouge Chine */
+    text-align: center;
+}
+
+#top-menu a {
+    display: inline-block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background 0.3s;
+}
+
+#top-menu a:hover {
+    background-color: #a31b10;
+}
+
+/* --- STRUCTURE --- */
+#content-wrapper {
+    display: flex;
+    flex: 1; /* Prend l'espace restant */
+}
+
+/* Sidebar Gauche */
+#left-nav {
+    width: 250px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #eee;
+    padding: 20px;
+    flex-shrink: 0;
+}
+
+#left-nav h3 {
+    color: #D52B1E;
+    border-bottom: 3px solid #FFC72C;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+#left-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+#left-nav a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #555;
+    border-bottom: 1px solid #eee;
+    transition: padding-left 0.2s;
+}
+
+#left-nav a:hover {
+    padding-left: 15px;
+    color: #D52B1E;
+    background-color: #fff;
+}
+
+.connect-link a {
+    background-color: #333;
+    color: #FFC72C !important;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+/* Contenu Central */
+#center-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Sidebar Droite */
+#right-side {
+    width: 280px;
+    background-color: #f9f9f9;
+    border-left: 1px solid #eee;
+    padding: 20px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+#video-container {
+    margin-bottom: 30px;
+    background: #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#newsletter-form-container {
+    background: #D52B1E;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#newsletter-form-container input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 3px;
+}
+
+#newsletter-form-container button {
+    background-color: #FFC72C;
+    color: #333;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* --- FOOTER --- */
+#footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+#footer a {
+    color: #FFC72C;
+    text-decoration: none;
+}
