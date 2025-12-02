@@ -44,7 +44,7 @@ include 'sidebar.php';
 <aside id="right-side">
     <div id="video-container">
         <video width="100%" height="auto" controls poster="images/poster_chine.jpg">
-            <source src="video/docu_chine.mp4" type="video/mp4">
+            <source src="documentaire.mp4" type="video/mp4">
             Vidéo non supportée.
         </video>
     </div>
