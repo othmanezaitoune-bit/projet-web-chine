@@ -41,8 +41,7 @@ include 'sidebar.php';
     
 </main>
 
-<aside id="right-side">
-    <p style="color:#D52B1E; font-weight:bold;">Réservez votre visite !</p>
-</aside>
+
+<?php include 'sidebar_right.php'; ?>
 
 <?php include 'footer.php'; ?>

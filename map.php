@@ -16,9 +16,6 @@ include 'sidebar.php';
     
 </main>
 
-<aside id="right-side">
-    <h3>Outil de Localisation</h3>
-    <p>L'intégration de Google Maps permet de localiser facilement le pays sans quitter le site.</p>
-</aside>
 
+<?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

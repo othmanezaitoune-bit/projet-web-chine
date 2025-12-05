@@ -26,10 +26,7 @@ include 'sidebar.php';
     </form>
 </main>
 
-<aside id="right-side">
-    <h3>Infos Contact</h3>
-    <p>Email: contact@chine-projet.ma</p>
-    <p>Téléphone: +212 00 00 00 00</p>
-</aside>
+
+<?php include 'sidebar_right.php'; ?>
 
 <?php include 'footer.php'; ?>

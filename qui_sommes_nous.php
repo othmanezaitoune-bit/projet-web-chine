@@ -1,12 +1,15 @@
 <?php 
+// Définir le titre spécifique de cette page
 $page_title = "Qui Sommes-Nous ?"; 
+
+// INCLUSIONS DE LA STRUCTURE UNIFORME
 include 'header.php'; 
 include 'sidebar.php'; 
 ?>
 
 <main id="center-content">
     <h2>👤 L'Équipe du Projet</h2>
-    <p>Ce mini-projet a été réalisé par le binôme suivant dans le cadre du module "Techniques Web et Multimédia" (2014/2015).</p>
+    [cite_start]<p>Ce mini-projet a été réalisé par le binôme suivant dans le cadre du module "Techniques Web et Multimédia" (2014/2015)[cite: 3, 4].</p>
     
     <div class="equipe-info" style="display: flex; align-items: center; gap: 40px; margin: 30px 0; padding: 15px; border: 1px solid #FFC72C;">
         <img src="images/othmane.png" alt="Photo de l'étudiant 1" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #D52B1E;">
@@ -31,10 +34,5 @@ include 'sidebar.php';
     </div>
     
 </main>
-
-<aside id="right-side">
-    <h3>Contactez-Nous</h3>
-    <p>Utilisez le lien de contact dans le menu principal pour toute question sur le projet.</p>
-</aside>
-
+<?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

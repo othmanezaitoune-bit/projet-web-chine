@@ -39,9 +39,6 @@ include 'sidebar.php';
     
 </main>
 
-<aside id="right-side">
-    <h3>Multimédia</h3>
-    <p>Cette galerie est un exemple de contenu multimédia interactif.</p>
-</aside>
 
+<?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

@@ -1,5 +1,10 @@
 <?php 
+// Définir le titre spécifique de cette page
 $page_title = "Liens Utiles"; 
+
+// Inclure la configuration de la BD si la page en avait besoin, sinon on l'omettra ici.
+// Pour les liens utiles, la BD n'est pas nécessaire.
+
 include 'header.php'; 
 include 'sidebar.php'; 
 ?>
@@ -32,10 +37,5 @@ include 'sidebar.php';
     </div>
     
 </main>
-
-<aside id="right-side">
-    <h3>Liens Externes</h3>
-    <p>Ces liens sont cruciaux pour l'internaute souhaitant obtenir des informations officielles.</p>
-</aside>
-
+<?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

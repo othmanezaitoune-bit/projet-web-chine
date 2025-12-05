@@ -35,9 +35,6 @@ include 'sidebar.php';
     
 </main>
 
-<aside id="right-side">
-    <h3>Navigation Intuitive</h3>
-    <p>Nous avons élaboré une navigation logique, simple et intuitive, pour que l'internaute ne se perde pas.</p>
-</aside>
 
+<?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

@@ -52,7 +52,8 @@ if ($news_id) {
                 <p style="margin-top: 20px;"><a href="all_news.php">Retour à toutes les news</a></p>
             </main>
 
-            <aside id="right-side">...</aside>
+            
+    <?php include 'sidebar_right.php'; ?> 
         </div>
         <footer id="footer">...</footer>
     </div>

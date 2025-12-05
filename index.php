@@ -41,23 +41,8 @@ include 'sidebar.php';
     <p><a href="all_news.php" class="btn">>> Toutes les news</a></p>
 </main>
 
-<aside id="right-side">
-    <div id="video-container">
-        <video width="100%" height="auto" controls poster="images/poster_chine.jpg">
-            <source src="documentaire.mp4" type="video/mp4">
-            Vidéo non supportée.
-        </video>
-    </div>
-    
-    <div id="newsletter-form-container">
-        <h3>Newsletter</h3>
-        <p>Recevez les dernières infos.</p>
-        <form action="newsletter_subscribe.php" method="POST">
-            <input type="email" name="email" placeholder="Votre email" required>
-            <button type="submit">Je m'inscris</button>
-        </form>
-    </div>
-</aside>
+
+<?php include 'sidebar_right.php'; ?>
 
 <?php 
 // 5. INCLURE LE FOOTER

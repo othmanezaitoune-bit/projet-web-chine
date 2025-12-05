@@ -40,9 +40,7 @@ include 'sidebar.php';
     
 </main>
 
-<aside id="right-side">
-    <h3>Saviez-vous que...</h3>
-    <p>La Chine compte plusieurs des villes les plus peuplées du monde, jouant un rôle majeur dans l'économie globale.</p>
-</aside>
+
+<?php include 'sidebar_right.php'; ?>
 
 <?php include 'footer.php'; ?>
