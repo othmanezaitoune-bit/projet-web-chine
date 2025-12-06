@@ -4,7 +4,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('../images/bg_pattern.gif') repeat #f4f4f4;
+    /* Remplacez ceci par un pattern de fond si besoin */
+    background-color: #f4f4f4; 
     color: #333;
     line-height: 1.6;
 }
@@ -15,7 +16,7 @@ body {
     margin: 20px auto;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    min-height: 90vh; /* Force la hauteur */
+    min-height: 90vh; 
     display: flex;
     flex-direction: column;
 }
@@ -26,6 +27,7 @@ body {
 }
 
 #banner {
+    /* Assurez-vous que l'image existe dans votre dossier /images/ */
     background-image: url('../images/grande_muraille_banner.jpg');
     background-size: cover;
     background-position: center;
@@ -38,13 +40,14 @@ body {
 #banner h1 {
     color: #fff;
     text-shadow: 2px 2px 4px #000;
-    background-color: rgba(213, 43, 30, 0.7); /* Rouge transparent */
+    background-color: rgba(213, 43, 30, 0.7); 
     padding: 10px 20px;
     border-radius: 5px;
 }
 
+/* Menu Horizontal */
 #top-menu {
-    background-color: #D52B1E; /* Rouge Chine */
+    background-color: #D52B1E; 
     text-align: center;
 }
 
@@ -62,13 +65,21 @@ body {
     background-color: #a31b10;
 }
 
-/* --- STRUCTURE --- */
-#content-wrapper {
-    display: flex;
-    flex: 1; /* Prend l'espace restant */
+/* --- RÈGLE : Menu Horizontal Actif --- */
+#top-menu a.active {
+    background-color: #A31F17; 
+    border-bottom: 3px solid #FFC72C; 
 }
 
-/* Sidebar Gauche */
+
+/* --- STRUCTURE GÉNÉRALE (3 COLONNES) --- */
+#content-wrapper {
+    display: flex; /* Active le flexbox pour les trois colonnes */
+    flex: 1; 
+    min-height: 600px; /* Aide à pousser le footer vers le bas */
+}
+
+/* --- SIDEBAR GAUCHE (left-nav) --- */
 #left-nav {
     width: 250px;
     background-color: #f9f9f9;
@@ -104,6 +115,32 @@ body {
     background-color: #fff;
 }
 
+/* --- NOUVELLES RÈGLES : Navigation Active --- */
+
+/* Menu Horizontal Actif */
+#top-menu a.active {
+    background-color: #A31F17; 
+    border-bottom: 3px solid #FFC72C; /* Ligne d'or */
+}
+
+/* Menu Latéral Actif */
+#left-nav a.active {
+    font-weight: bold;
+    color: #D52B1E; /* Rouge Chine */
+    background-color: #f0f0f0;
+    border-left: 5px solid #FFC72C; /* Barre d'or sur le côté */
+    padding-left: 10px; /* Compense la barre */
+}
+
+/* --- RÈGLE : Menu Latéral Actif --- */
+#left-nav a.active {
+    font-weight: bold;
+    color: #D52B1E; 
+    background-color: #f0f0f0;
+    border-left: 5px solid #FFC72C; 
+    padding-left: 10px; 
+}
+
 .connect-link a {
     background-color: #333;
     color: #FFC72C !important;
@@ -112,14 +149,14 @@ body {
     border-radius: 4px;
 }
 
-/* Contenu Central */
+/* --- CONTENU CENTRAL (main) --- */
 #center-content {
-    flex-grow: 1;
+    flex-grow: 1; /* Prend l'espace restant */
     padding: 30px;
     background-color: #fff;
 }
 
-/* Sidebar Droite */
+/* --- SIDEBAR DROITE (right-side) --- */
 #right-side {
     width: 280px;
     background-color: #f9f9f9;
@@ -129,6 +166,7 @@ body {
     text-align: center;
 }
 
+/* Styles pour la Vidéo et la Newsletter */
 #video-container {
     margin-bottom: 30px;
     background: #000;
@@ -143,11 +181,12 @@ body {
 }
 
 #newsletter-form-container input {
-    width: 90%;
+    width: 100%; /* Corrigé pour prendre toute la largeur du conteneur */
     padding: 10px;
     margin: 10px 0;
     border: none;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 #newsletter-form-container button {
@@ -158,7 +197,44 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     width: 100%;
+    margin-top: 10px;
 }
+
+/* --- CORRECTION DU FORMULAIRE DE CONTACT (CRITIQUE) --- */
+
+.form-group {
+    margin-bottom: 15px; 
+    width: 100%;
+}
+
+#contactForm label {
+    display: block; /* Force le label à prendre sa propre ligne */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contactForm input[type="text"], 
+#contactForm input[type="email"], 
+#contactForm textarea {
+    width: 100%; 
+    padding: 10px;
+    box-sizing: border-box; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactForm button {
+    background-color: #D52B1E;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    display: block; /* Force le bouton sur sa propre ligne */
+    margin-top: 20px; 
+}
+
 
 /* --- FOOTER --- */
 #footer {
@@ -172,45 +248,4 @@ body {
 #footer a {
     color: #FFC72C;
     text-decoration: none;
-}
-
-/* --- Styles pour les formulaires (contact.php) --- */
-
-.form-group {
-    margin-bottom: 15px; /* Espacement entre les groupes de champs */
-    width: 100%; /* S'assurer que chaque groupe prend toute la largeur */
-    clear: both; /* Important pour éviter les flottements indésirables */
-}
-
-#contactForm label {
-    display: block; /* Force le label à prendre sa propre ligne */
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
-
-#contactForm input[type="text"], 
-#contactForm input[type="email"], 
-#contactForm textarea {
-    width: 100%; /* Prend 100% de la largeur du parent (.form-group) */
-    padding: 10px;
-    box-sizing: border-box; /* S'assure que le padding n'augmente pas la largeur totale */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contactForm textarea {
-    resize: vertical; /* Permet uniquement le redimensionnement vertical */
-}
-
-#contactForm button {
-    /* Style du bouton (Rouge/Blanc) */
-    background-color: #D52B1E;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: 10px; /* Ajoute un espace au-dessus du bouton */
 }

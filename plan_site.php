@@ -11,30 +11,30 @@ include 'sidebar.php';
 
     <h3>Menu Principal (Horizontal)</h3>
     <ul>
-        <li><a href="index.php">Accueil</a> (Page d'index du site)</li>
+        <li><a href="index.php">Accueil</a></li>
         <li><a href="plan_site.php">Plan de site</a> (Cette page)</li>
-        <li><a href="qui_sommes_nous.php">Qui sommes-nous?</a> (Informations sur l'équipe)</li>
-        <li><a href="contact.php">Contact</a> (Formulaire de contact avec validation JavaScript)</li>
+        <li><a href="qui_sommes_nous.php">Qui sommes-nous?</a></li>
+        <li><a href="contact.php">Contact</a></li>
     </ul>
     
     <h3>Navigation Latérale (Exploration du Pays)</h3>
     <ul>
-        <li><a href="sites_monuments.php">Sites et Monuments</a> (Description et photos de 3 monuments)</li>
-        <li><a href="villes_index.php">Index des villes</a> (Tableau de 3 villes)</li>
-        <li><a href="photos_galerie.php">Photos de la ville</a> (Galerie de 5 photos)</li>
-        <li><a href="map.php">Carte (Google Map)</a> (Localisation du pays via iframe)</li>
-        <li><a href="liens_utiles.php">Liens utiles</a> (3 liens vers des établissements publics)</li>
+        <li><a href="sites_monuments.php">Sites et Monuments</a></li>
+        <li><a href="villes_index.php">Index des villes (Shanghai, Pékin, Guangzhou)</a></li>
+        <li><a href="photos_galerie.php">Photos de la ville (Galerie 3x3)</a></li>
+        <li><a href="map.php">Carte (Google Map)</a></li>
+        <li><a href="liens_utiles.php">Liens utiles</a></li>
+        <li><a href="all_news.php">Toutes les news (avec recherche et pagination)</a></li>
     </ul>
 
-    <h3>Fonctionnalités Dynamiques (PHP/BD)</h3>
+    <h3>Fonctionnalités Dynamiques et Administration</h3>
     <ul>
-        <li><a href="all_news.php">Toutes les news</a> (Affichage des actualités avec pagination)</li>
-        <li><a href="admin/login.php">Espace Admin</a> (Ajout/Modification/Suppression des news)</li>
-        <li>Inscription Newsletter (Gestion de la table Internaute)</li>
+        <li><a href="newsletter_subscribe.php">Inscription Newsletter</a> (Gestion de la table Internaute)</li>
+        <li><a href="admin/login.php">Espace Admin</a> (Connexion sécurisée par Hash)</li>
+        <li><a href="admin/news_management.php">Gestion des News</a> (Interface CRUD)</li>
     </ul>
     
 </main>
-
 
 <?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

@@ -5,34 +5,32 @@ include 'sidebar.php';
 ?>
 
 <main id="center-content">
-<h2>📧 Contactez-Nous</h2>
-<p>Remplissez le formulaire ci-dessous pour nous contacter. Le script.js validera le format de votre email.</p>
+    <h2>📧 Contactez-Nous</h2>
+    <p>Remplissez le formulaire ci-dessous pour nous contacter. Le script.js validera le format de votre email.</p>
 
-<form id="contactForm" action="contact_submit.php" method="POST">
-    
-    <div class="form-group">
-        <label for="nom">Nom Complet:</label>
-        <input type="text" id="nom" name="nom" required>
-        <span id="nomError" class="error-message"></span>
-    </div>
+    <form id="contactForm" action="contact_submit.php" method="POST" style="max-width: 600px;">
+        
+        <div class="form-group">
+            <label for="nom">Nom Complet:</label>
+            <input type="text" id="nom" name="nom" required>
+            <span id="nomError" class="error-message"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="email">Adresse Email:</label>
-        <input type="email" id="email" name="email" required>
-        <span id="emailError" class="error-message"></span>
-    </div>
+        <div class="form-group">
+            <label for="email">Adresse Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error-message"></span>
+        </div>
 
-    <div class="form-group">
-        <label for="message">Votre Message:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
-        <span id="messageError" class="error-message"></span>
-    </div>
+        <div class="form-group">
+            <label for="message">Votre Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+            <span id="messageError" class="error-message"></span>
+        </div>
 
-    <button type="submit">Envoyer le Message</button>
-</form>
+        <button type="submit">Envoyer le Message</button>
+    </form>
 </main>
 
-
 <?php include 'sidebar_right.php'; ?>
-
 <?php include 'footer.php'; ?>

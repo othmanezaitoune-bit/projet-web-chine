@@ -1,9 +1,14 @@
 <?php
 session_start();
 
-// Identifiants statiques pour la simplicité du mini-projet
+// --- DÉBUT DE LA CONFIGURATION DE SÉCURITÉ ---
+// Identifiants STATIQUES pour la simplicité du mini-projet
 $admin_login = "admin";
-$admin_password = "password123"; // CHANGEZ CE MOT DE PASSE POUR LE TEST
+
+// LIGNE CRITIQUE : Remplacez "VOTRE_HASH_ICI" par la longue chaîne que vous avez générée.
+// Cette chaîne doit TOUJOURS être entre guillemets.
+$admin_hashed_password = '$2y$10$OzNHn64wyTLx7hPQOano1ee8Jq42Co/7Jk0IPACPbq7xS/mgZBFtS'; 
+// --- FIN DE LA CONFIGURATION DE SÉCURITÉ ---
 
 $error = '';
 
@@ -11,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $login = $_POST['login'] ?? '';
     $password = $_POST['password'] ?? '';
     
-    if ($login === $admin_login && $password === $admin_password) {
+    // Vérification sécurisée du mot de passe
+    if ($login === $admin_login && password_verify($password, $admin_hashed_password)) {
         $_SESSION['admin_logged_in'] = true;
         header('Location: news_management.php');
         exit();
@@ -25,7 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Connexion Administrateur</title>
-    <link rel="stylesheet" href="../css/style.css"> <style>
+    <link rel="stylesheet" href="../css/style.css"> 
+    <style>
         #login-box { 
             width: 350px; 
             margin: 50px auto; 
@@ -42,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <div id="container">
-        <header id="header">Connexion Administration</header>
+        <header id="header" style="text-align: center; padding: 20px;">Connexion Administration</header>
         <div id="login-box">
             <h2>Se connecter</h2>
             
@@ -61,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
             <p style="text-align: center; margin-top: 20px;"><a href="../index.php">Retour au site public</a></p>
         </div>
-        <footer id="footer">...</footer>
+        <footer id="footer" style="text-align: center; padding: 10px; margin-top: 20px;">Copyright &copy; 2024</footer>
     </div>
 </body>
 </html>
