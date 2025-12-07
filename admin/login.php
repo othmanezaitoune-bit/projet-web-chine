@@ -3,11 +3,11 @@ session_start();
 
 // --- DÉBUT DE LA CONFIGURATION DE SÉCURITÉ ---
 // Identifiants STATIQUES pour la simplicité du mini-projet
-$admin_login = "admin";
+$admin_login = "binome";
 
 // LIGNE CRITIQUE : Remplacez "VOTRE_HASH_ICI" par la longue chaîne que vous avez générée.
 // Cette chaîne doit TOUJOURS être entre guillemets.
-$admin_hashed_password = '$2y$10$OzNHn64wyTLx7hPQOano1ee8Jq42Co/7Jk0IPACPbq7xS/mgZBFtS'; 
+$admin_hashed_password = '$2y$10$5W47Dq/EMSrsfmWjw6bCiOwotEqlKLT7ufM1Y91LAv3ywiJPzKk0y'; 
 // --- FIN DE LA CONFIGURATION DE SÉCURITÉ ---
 
 $error = '';
@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <?php endif; ?>
 
             <form action="login.php" method="POST">
-                <label for="login">Login (admin):</label>
+                <label for="login">Login :</label>
                 <input type="text" name="login" id="login" required>
                 
                 <label for="password">Mot de passe:</label>

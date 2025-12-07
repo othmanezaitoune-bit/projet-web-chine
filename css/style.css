@@ -583,7 +583,7 @@ body {
 /* L'IMAGE */
 .favorite-card img {
     width: 100%;
-    height: auto; 
+    height: 500px; 
     display: block;
     /* On enlève le zoom sur l'image pour alléger l'effet */
     transition: opacity 0.3s ease;
