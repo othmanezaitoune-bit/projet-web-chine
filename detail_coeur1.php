@@ -8,7 +8,7 @@ include 'sidebar.php';
     <h2>🌾 Coup de Cœur #1 : Les Rizières en Terrasses</h2>
     
     <div style="margin-bottom: 20px;">
-        <img src="images/coeur1.jpg" alt="Rizières en terrasses" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <img src="Rizières de Chine 🇨🇳.jfif" alt="Rizières en terrasses" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
     </div>
     
     <h3>Description</h3>

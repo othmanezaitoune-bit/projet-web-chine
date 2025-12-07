@@ -31,17 +31,17 @@ include 'sidebar.php';
     <div class="coups-de-coeur-gallery" style="display: flex; gap: 15px; margin-bottom: 30px; justify-content: space-around; flex-wrap: wrap;">
         
         <a href="detail_coeur1.php" style="text-align: center; text-decoration: none; color: #333;">
-            <img src="images/coeur1.jpg" alt="Rizières en terrasses" style="width: 150px; height: 100px; object-fit: cover; border: 2px solid #D52B1E;">
+            <img src="Rizières de Chine 🇨🇳.jfif" alt="Rizières en terrasses" style="width: 150px; height: 100px; object-fit: cover; border: 2px solid #D52B1E;">
             <p style="margin-top: 5px; font-weight: bold;">Rizières</p>
         </a>
         
         <a href="detail_coeur2.php" style="text-align: center; text-decoration: none; color: #333;">
-            <img src="images/coeur2.jpg" alt="Montagnes Karstiques" style="width: 150px; height: 100px; object-fit: cover; border: 2px solid #D52B1E;">
+            <img src="The mountains of Guilin are not as grand as those….jfif" alt="Montagnes Karstiques" style="width: 150px; height: 100px; object-fit: cover; border: 2px solid #D52B1E;">
             <p style="margin-top: 5px; font-weight: bold;">Montagnes Karstiques</p>
         </a>
         
         <a href="detail_coeur3.php" style="text-align: center; text-decoration: none; color: #333;">
-            <img src="images/coeur3.jpg" alt="Pandas Géants" style="width: 150px; height: 100px; object-fit: cover; border: 2px solid #D52B1E;">
+            <img src="From KlickPin CF Panda Bears Enjoying Bamboo in Chengdu China.jpg" alt="Pandas Géants" style="width: 150px; height: 100px; object-fit: cover; border: 2px solid #D52B1E;">
             <p style="margin-top: 5px; font-weight: bold;">Pandas Géants</p>
         </a>
     </div>

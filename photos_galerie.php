@@ -40,17 +40,17 @@ include 'sidebar.php';
         <div class="gallery-grid">
             
             <div class="gallery-item">
-                <img src="images/shang1.jpg" alt="Skyline de Shanghai">
+                <img src="Shanghai pudong at dusk_ Shanghai pudong skyline….jfif" alt="Skyline de Shanghai">
                 <p>La **Skyline de Pudong**, symbole de modernité.</p>
             </div>
 
             <div class="gallery-item">
-                <img src="images/shanghai_bund.jpg" alt="Le Bund">
+                <img src="the bund shanghai.jfif" alt="Le Bund">
                 <p>Le **Bund**, mélange d'architecture coloniale et moderne.</p>
             </div>
 
             <div class="gallery-item">
-                <img src="images/shanghai_cuisine.jpg" alt="Cuisine de rue">
+                <img src="La vibrante cuisine de rue locale shanghai.jfif" alt="Cuisine de rue">
                 <p>La vibrante **cuisine de rue** locale.</p>
             </div>
             
@@ -63,17 +63,17 @@ include 'sidebar.php';
         <div class="gallery-grid">
             
             <div class="gallery-item">
-                <img src="images/pekin_cite_interdite.jpg" alt="La Cité Interdite">
+                <img src="la cite interdite.jpg" alt="La Cité Interdite">
                 <p>La **Cité Interdite**, centre impérial historique.</p>
             </div>
 
             <div class="gallery-item">
-                <img src="images/pekin_temple_ciel.jpg" alt="Temple du Ciel">
+                <img src="pekin2.jpg" alt="Temple du Ciel">
                 <p>Le **Temple du Ciel**, architecture sacrée magnifique.</p>
             </div>
 
             <div class="gallery-item">
-                <img src="images/pekin_hutongs.jpg" alt="Hutongs de Pékin">
+                <img src="les hutongs de pékin.jpg" alt="Hutongs de Pékin">
                 <p>Les **Hutongs**, quartiers anciens traditionnels.</p>
             </div>
             
@@ -86,17 +86,17 @@ include 'sidebar.php';
         <div class="gallery-grid">
             
             <div class="gallery-item">
-                <img src="images/guangzhou_tour.jpg" alt="Tour Canton">
+                <img src="guangzhou1.jpg" alt="Tour Canton">
                 <p>La **Tour Canton**, un chef-d'œuvre de l'ingénierie moderne.</p>
             </div>
 
             <div class="gallery-item">
-                <img src="images/guangzhou_perle.jpg" alt="Rivière des Perles">
+                <img src="la rivieres des perles guangzhou.jpg" alt="Rivière des Perles">
                 <p>La **Rivière des Perles**, un axe de transport et de vie.</p>
             </div>
 
             <div class="gallery-item">
-                <img src="images/guangzhou_temple.jpg" alt="Temple des Six Banians">
+                <img src="Temple of the Six Banyon Trees, Guangzhou, China.jfif" alt="Temple des Six Banians">
                 <p>Le **Temple des Six Banians**, un lieu historique et religieux.</p>
             </div>
             
