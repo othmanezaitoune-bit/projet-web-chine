@@ -345,3 +345,307 @@ body {
 .crud-actions button {
     cursor: pointer;
 }
+
+/* --- Styles Modernes pour le Plan du Site --- */
+
+/* 1. En-tête de la section centrale */
+.sitemap-header {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.sitemap-header h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.sitemap-header p {
+    color: #666;
+    font-style: italic;
+    font-size: 14px;
+}
+
+/* 2. Grille de cartes (Responsive) */
+.sitemap-container {
+    display: grid;
+    /* Crée des colonnes automatiques : minimum 250px de large */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+    gap: 20px; /* Espace entre les cartes */
+}
+
+/* 3. Style des Cartes (Les boites blanches) */
+.sitemap-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px; /* Coins arrondis */
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Ombre légère */
+    transition: transform 0.2s ease;
+}
+
+.sitemap-card:hover {
+    transform: translateY(-3px); /* Petite animation au survol */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.sitemap-card h3 {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #b71c1c; /* Rouge foncé pour rappeler le thème */
+    border-bottom: 2px solid #b71c1c;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+/* 4. Style de la liste et des liens */
+.sitemap-list {
+    list-style: none; /* Enlève les puces noires moches */
+    padding: 0;
+    margin: 0;
+}
+
+.sitemap-list li {
+    margin-bottom: 8px;
+}
+
+.sitemap-list a {
+    display: block; /* Rend tout le lien cliquable */
+    text-decoration: none;
+    color: #444;
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border-left: 3px solid transparent; /* Bordure invisible par défaut */
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+/* Effet au survol de la souris */
+.sitemap-list a:hover {
+    background-color: #fff0f0; /* Fond rouge très pâle */
+    border-left: 3px solid #d32f2f; /* Barre rouge à gauche */
+    color: #d32f2f;
+    padding-left: 15px; /* Petit décalage vers la droite */
+}
+
+/* Lien de la page active */
+.sitemap-list a.current-page {
+    font-weight: bold;
+    color: #888;
+    background: none;
+    cursor: default;
+}
+
+/* --- Styles Modernes pour le Plan du Site (CORRIGÉ) --- */
+
+/* 1. En-tête de la section centrale */
+.sitemap-header {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    text-align: center; /* On centre le titre pour faire plus propre */
+}
+
+.sitemap-header h2 {
+    color: #D52B1E; /* Rouge du thème */
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sitemap-header p {
+    color: #666;
+    font-size: 15px;
+}
+
+/* 2. Grille de cartes (Correction de la largeur) */
+.sitemap-container {
+    display: grid;
+    /* J'ai passé le minmax à 180px pour que ça rentre sur 3 colonnes */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 20px;
+    align-items: start; /* Empêche les cartes de s'étirer bizarrement */
+}
+
+/* 3. Style des Cartes */
+.sitemap-card {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+    text-align: center; /* Centre le titre et l'icône */
+}
+
+.sitemap-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #FFC72C; /* Bordure or au survol */
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.sitemap-card h3 {
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 2px solid #FFC72C; /* Soulignement or */
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* 4. Style de la liste et des liens */
+.sitemap-list {
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    text-align: left; /* On remet la liste alignée à gauche pour la lecture */
+}
+
+.sitemap-list li {
+    margin-bottom: 8px;
+}
+
+/* J'utilise #center-content devant pour forcer la priorité du style */
+#center-content .sitemap-list a {
+    display: block;
+    text-decoration: none !important; /* Force la suppression du souligné */
+    color: #555 !important; /* Force la couleur grise */
+    padding: 8px 12px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+/* Effet au survol */
+#center-content .sitemap-list a:hover {
+    background-color: #fff5f5; /* Fond rouge très pâle */
+    color: #D52B1E !important; /* Texte rouge */
+    border-left: 3px solid #D52B1E; /* Barre rouge à gauche */
+    padding-left: 18px; /* Décalage */
+}
+
+/* Lien de la page active */
+#center-content .sitemap-list a.current-page {
+    font-weight: bold;
+    color: #999 !important;
+    background: none;
+    cursor: default;
+    border: none;
+    padding-left: 12px;
+}
+
+/* --- ACCUEIL : PHOTOS COUPS DE CŒUR (AJUSTÉ) --- */
+
+.favorites-list {
+    display: flex;
+    flex-direction: column; /* Empile les images verticalement */
+    align-items: center;    /* CENTRE les images dans la colonne */
+    gap: 30px;              /* Espace un peu réduit entre les blocs */
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.favorite-card {
+    display: block;
+    text-decoration: none;
+    width: 100%;            /* Prend la largeur disponible... */
+    max-width: 450px;       /* ...MAIS s'arrête à 450px (taille idéale) */
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    
+    /* Ombre légère par défaut */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    
+    /* Transition fluide pour le mouvement et l'ombre */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* L'IMAGE */
+.favorite-card img {
+    width: 100%;
+    height: auto; 
+    display: block;
+    /* On enlève le zoom sur l'image pour alléger l'effet */
+    transition: opacity 0.3s ease;
+}
+
+/* LE TITRE SOUS L'IMAGE */
+.card-title {
+    padding: 12px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    border-bottom: 3px solid #D52B1E;
+    background-color: #fff;
+    transition: color 0.3s ease;
+}
+
+/* --- NOUVELLE ANIMATION (Lévitation) --- */
+
+.favorite-card:hover {
+    /* Au lieu de grossir, la carte "monte" de 8 pixels */
+    transform: translateY(-8px); 
+    
+    /* L'ombre devient plus diffuse en bas pour simuler la hauteur */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+}
+
+.favorite-card:hover .card-title {
+    color: #D52B1E; /* Le texte passe au rouge */
+}
+
+.favorite-card:hover img {
+    opacity: 0.9; /* Petit effet de lumière subtil */
+}
+
+/* --- MODIFICATION DE LA SIDEBAR DROITE --- */
+#right-side {
+    /* On passe de 280px à 320px pour que la vidéo de 300px rentre */
+    width: 320px; 
+    background-color: #f9f9f9;
+    border-left: 1px solid #eee;
+    padding: 20px;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* --- MODIFICATION DE LA VIDÉO (300x300) --- */
+#video-container {
+    width: 300px;  /* Largeur imposée */
+    height: 300px; /* Hauteur imposée */
+    margin: 0 auto 30px auto; /* Centré horizontalement */
+    background: #000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden; /* Coupe ce qui dépasse si nécessaire */
+}
+
+/* Force l'élément vidéo (ou iframe Youtube) à prendre toute la place */
+#video-container iframe, 
+#video-container video, 
+#video-container object {
+    width: 300px;
+    height: 300px;
+    border: none;
+    display: block;
+}

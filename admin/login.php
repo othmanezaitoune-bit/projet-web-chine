@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
             <p style="text-align: center; margin-top: 20px;"><a href="../index.php">Retour au site public</a></p>
         </div>
-        <footer id="footer" style="text-align: center; padding: 10px; margin-top: 20px;">Copyright &copy; 2024</footer>
+        <footer id="footer" style="text-align: center; padding: 10px; margin-top: 20px;">Copyright &copy; 2025-2026 Projet Dev Web - Tous droits réservés.</footer>
     </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
                 <span class="separator">|</span>
                 <a href="#">Conditions d'utilisation</a>
             </nav>
-            <p>&copy; 2024-2025 Projet Web Chine - Tous droits réservés.</p>
+            <p>&copy; 2025-2026 Projet Dev Web - Tous droits réservés.</p>
         </footer>
     </div> </body>
 </html>
