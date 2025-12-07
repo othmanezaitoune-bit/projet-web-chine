@@ -22,6 +22,7 @@ include 'sidebar.php';
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li><strong>Nom :</strong> VOTRE NOM</li>
                     <li><strong>Prénom :</strong> VOTRE PRÉNOM</li>
+                    <li><strong>CNE :</strong> CNE DU BINÔME</li>
                     <li><strong>Email :</strong> <a href="mailto:email@etu.ma" style="color: #5DADE2;">votre.email@etu.ma</a></li>
                 </ul>
             </div>
@@ -36,6 +37,7 @@ include 'sidebar.php';
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li><strong>Nom :</strong> NOM DU BINÔME</li>
                     <li><strong>Prénom :</strong> PRÉNOM</li>
+                    <li><strong>CNE :</strong> CNE DU BINÔME</li>
                     <li><strong>Email :</strong> <a href="mailto:email2@etu.ma" style="color: #5DADE2;">binome.email@etu.ma</a></li>
                 </ul>
             </div>
