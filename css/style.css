@@ -249,3 +249,99 @@ body {
     color: #FFC72C;
     text-decoration: none;
 }
+
+/* --- Styles pour la Gestion des News (CRUD) --- */
+
+/* Formulaire d'Ajout/Modification */
+.form-crud {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border: 1px solid #ddd;
+    border-top: 3px solid #D52B1E; /* Haut Rouge */
+    border-radius: 5px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.form-crud label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-crud input[type="text"], 
+.form-crud textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.form-crud input:focus, 
+.form-crud textarea:focus {
+    border-color: #FFC72C; /* Focus Or */
+    outline: none;
+}
+
+/* Boutons d'action */
+.btn-save {
+    background-color: #D52B1E;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.btn-add {
+    display: inline-block;
+    background-color: #28a745; /* Vert pour l'ajout */
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Tableau des News */
+.crud-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.crud-table th {
+    background-color: #D52B1E; /* En-tête Rouge */
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+.crud-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.crud-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.crud-actions button {
+    cursor: pointer;
+}
