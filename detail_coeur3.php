@@ -8,7 +8,7 @@ include 'sidebar.php';
     <h2>🐼 Coup de Cœur #3 : Les Pandas Géants du Sichuan</h2>
     
     <div style="margin-bottom: 20px;">
-        <img src="From KlickPin CF Panda Bears Enjoying Bamboo in Chengdu China.jpg" alt="Pandas Géants" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <img src="images/From KlickPin CF Panda Bears Enjoying Bamboo in Chengdu China.jpg" alt="Pandas Géants" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
     </div>
     
     <h3>Description</h3>

@@ -5,38 +5,44 @@ include 'sidebar.php';
 ?>
 
 <main id="center-content">
-    <h2>Sites et Monuments Historiques</h2>
-    
-    <div class="monument-item" style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #ccc;">
-        <h3>1. La Grande Muraille</h3>
-        <img src="great-wall-of-china.jpg" alt="La Grande Muraille de Chine" style="max-width: 100%; height: auto;">
-        <p>
-            La Grande Muraille est une série de fortifications militaires, construite, reconstruite et entretenue entre le Vᵉ siècle av. J.-C. et le XVIᵉ siècle pour protéger la frontière nord de la Chine. 
-
-[Image of The Great Wall of China banner]
-
-        </p>
-    </div>
-
-    <div class="monument-item" style="margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px dashed #ccc;">
-        <h3>2. L'Armée de Terre Cuite (Xi'an)</h3>
-        <img src="Image of the Terracotta Army in Xi'an.jpg" alt="Armée de Terre Cuite" style="max-width: 100%; height: auto;">
-        <p>
-            C'est une collection de sculptures en terre cuite représentant les armées de Qin Shi Huang, le premier empereur de Chine. Le site archéologique est immense. 
-
-[Image of the Terracotta Army in Xi'an]
-
-        </p>
-    </div>
-
-    <div class="monument-item">
-        <h3>3. La Cité Interdite (Pékin)</h3>
-        <img src="la cite interdite.jpg" alt="La Cité Interdite" style="max-width: 100%; height: auto;">
-        <p>
-            Ancien palais impérial des dynasties Ming et Qing. Elle est le plus grand complexe de palais anciens au monde, situé au cœur de Pékin.
-        </p>
+    <div class="monuments-header" style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 30px;">
+        <h2 style="color: #2E8B57;">Sites et Monuments Historiques</h2>
+        <p>Explorez les merveilles architecturales qui ont façonné l'histoire de la Chine.</p>
     </div>
     
+    <div class="monuments-list" style="display: flex; flex-direction: column; gap: 40px;">
+
+        <article class="monument-card" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <h3 style="background-color: #2E8B57; color: white; padding: 12px 20px; margin: 0;">1. La Grande Muraille</h3>
+            <div class="monument-img-wrapper">
+                <img src="images/great-wall-of-china.jpg" alt="Grande Muraille" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="monument-content" style="padding: 20px;">
+                <p>La Grande Muraille est une série de fortifications militaires, construite pour protéger la frontière nord de la Chine.</p>
+            </div>
+        </article>
+
+        <article class="monument-card" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <h3 style="background-color: #2E8B57; color: white; padding: 12px 20px; margin: 0;">2. L'Armée de Terre Cuite (Xi'an)</h3>
+            <div class="monument-img-wrapper">
+                <img src="images/Image of the Terracotta Army in Xi'an.jpg" alt="Armée de Terre Cuite" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="monument-content" style="padding: 20px;">
+                <p>C'est une collection de sculptures en terre cuite représentant les armées de Qin Shi Huang.</p>
+            </div>
+        </article>
+
+        <article class="monument-card" style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            <h3 style="background-color: #2E8B57; color: white; padding: 12px 20px; margin: 0;">3. La Cité Interdite (Pékin)</h3>
+            <div class="monument-img-wrapper">
+                <img src="images/la cite interdite.jpg" alt="La Cité Interdite" style="width: 100%; height: auto; display: block;">
+            </div>
+            <div class="monument-content" style="padding: 20px;">
+                <p>Ancien palais impérial des dynasties Ming et Qing situé au cœur de Pékin.</p>
+            </div>
+        </article>
+        
+    </div>
 </main>
 
 <?php include 'sidebar_right.php'; ?>

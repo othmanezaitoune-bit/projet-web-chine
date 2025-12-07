@@ -1,38 +1,49 @@
 <?php 
-// Définir le titre spécifique de cette page
 $page_title = "Qui Sommes-Nous ?"; 
-
-// INCLUSIONS DE LA STRUCTURE UNIFORME
 include 'header.php'; 
 include 'sidebar.php'; 
 ?>
 
 <main id="center-content">
-    <h2>👤 L'Équipe du Projet</h2>
-    [cite_start]<p>Ce mini-projet a été réalisé par le binôme suivant dans le cadre du module "Techniques Web et Multimédia" (2014/2015)[cite: 3, 4].</p>
     
-    <div class="equipe-info" style="display: flex; align-items: center; gap: 40px; margin: 30px 0; padding: 15px; border: 1px solid #FFC72C;">
-        <img src="images/othmane.png" alt="Photo de l'étudiant 1" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #D52B1E;">
-        <div class="membre">
-            <h3>Membre 1</h3>
-            <p><strong>Nom :</strong> VOTRE NOM</p>
-            <p><strong>Prénom :</strong> VOTRE PRÉNOM</p>
-            <p><strong>CNE :</strong> A123456789</p>
-            <p><strong>Adresse Email :</strong> votre.email1@etu.usmba.ac.ma</p>
-        </div>
+    <div class="about-header" style="border-bottom: 1px solid #eee; margin-bottom: 30px;">
+        <h2 style="color: #2E8B57;">👤 L'Équipe du Projet</h2>
+        <p>Ce site a été réalisé par le binôme suivant dans le cadre du module "Techniques Web".</p>
     </div>
     
-    <div class="equipe-info" style="display: flex; align-items: center; gap: 40px; margin: 30px 0; padding: 15px; border: 1px solid #FFC72C;">
-        <img src="images/photo_membre2.jpg" alt="Photo de l'étudiant 2" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid #D52B1E;">
-        <div class="membre">
-            <h3>Membre 2</h3>
-            <p><strong>Nom :</strong> NOM DU BINÔME</p>
-            <p><strong>Prénom :</strong> PRÉNOM DU BINÔME</p>
-            <p><strong>CNE :</strong> B987654321</p>
-            <p><strong>Adresse Email :</strong> votre.email2@etu.usmba.ac.ma</p>
+    <div class="team-container" style="display: flex; flex-direction: column; gap: 30px;">
+        
+        <div class="team-member-card" style="display: flex; align-items: center; gap: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <div class="member-photo">
+                <img src="images/othmane.png" alt="Etudiant 1" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #2E8B57; object-fit: cover;">
+            </div>
+            <div class="member-info">
+                <h3 style="margin: 0 0 10px 0; color: #2E8B57;">Membre 1</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><strong>Nom :</strong> VOTRE NOM</li>
+                    <li><strong>Prénom :</strong> VOTRE PRÉNOM</li>
+                    <li><strong>Email :</strong> <a href="mailto:email@etu.ma" style="color: #5DADE2;">votre.email@etu.ma</a></li>
+                </ul>
+            </div>
         </div>
+        
+        <div class="team-member-card" style="display: flex; align-items: center; gap: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
+            <div class="member-photo">
+                <img src="images/photo_membre2.jpg" alt="Etudiant 2" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #2E8B57; object-fit: cover;">
+            </div>
+            <div class="member-info">
+                <h3 style="margin: 0 0 10px 0; color: #2E8B57;">Membre 2</h3>
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li><strong>Nom :</strong> NOM DU BINÔME</li>
+                    <li><strong>Prénom :</strong> PRÉNOM</li>
+                    <li><strong>Email :</strong> <a href="mailto:email2@etu.ma" style="color: #5DADE2;">binome.email@etu.ma</a></li>
+                </ul>
+            </div>
+        </div>
+
     </div>
     
 </main>
+
 <?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

@@ -1,14 +1,12 @@
 <?php
-// Fonction utilitaire pour déterminer si un lien est actif
+// Détection automatique : Si on est dans le dossier 'admin', on remonte d'un cran
+$in_admin = strpos($_SERVER['PHP_SELF'], '/admin/') !== false;
+$path_prefix = $in_admin ? '../' : '';
+
+// Fonction pour ajouter la classe 'active' au lien du menu actuel
 function is_active($page_name) {
-    // Récupère le nom du script actuel (ex: index.php, contact.php)
-    $current_page = basename($_SERVER['PHP_SELF']); 
-    
-    // Compare le nom du lien au nom du fichier actuel
-    if ($current_page == $page_name) {
-        return 'active';
-    }
-    return '';
+    // basename récupère juste le nom du fichier (ex: index.php)
+    return (basename($_SERVER['PHP_SELF']) == $page_name) ? 'active' : '';
 }
 ?>
 <!DOCTYPE html>
@@ -16,9 +14,10 @@ function is_active($page_name) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $page_title ?? "Chine - Projet Web"; ?></title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/script.js" defer></script>
+    <title><?php echo $page_title ?? "Chine - Voyage & Découverte"; ?></title>
+    
+    <link rel="stylesheet" href="<?php echo $path_prefix; ?>css/style.css">
+    <script src="<?php echo $path_prefix; ?>js/script.js" defer></script>
 </head>
 <body>
     <div id="container">
@@ -28,10 +27,10 @@ function is_active($page_name) {
             </div> 
             
             <nav id="top-menu">
-                <a href="index.php" class="<?php echo is_active('index.php'); ?>">Accueil</a>
-                <a href="plan_site.php" class="<?php echo is_active('plan_site.php'); ?>">Plan de site</a>
-                <a href="qui_sommes_nous.php" class="<?php echo is_active('qui_sommes_nous.php'); ?>">Qui sommes-nous?</a>
-                <a href="contact.php" class="<?php echo is_active('contact.php'); ?>">Contact</a>
+                <a href="<?php echo $path_prefix; ?>index.php" class="<?php echo is_active('index.php'); ?>">Accueil</a>
+                <a href="<?php echo $path_prefix; ?>plan_site.php" class="<?php echo is_active('plan_site.php'); ?>">Plan de site</a>
+                <a href="<?php echo $path_prefix; ?>qui_sommes_nous.php" class="<?php echo is_active('qui_sommes_nous.php'); ?>">Qui sommes-nous?</a>
+                <a href="<?php echo $path_prefix; ?>contact.php" class="<?php echo is_active('contact.php'); ?>">Contact</a>
             </nav>
         </header>
 

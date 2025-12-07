@@ -1,41 +1,44 @@
 <?php 
-// Définir le titre spécifique de cette page
 $page_title = "Liens Utiles"; 
-
-// Inclure la configuration de la BD si la page en avait besoin, sinon on l'omettra ici.
-// Pour les liens utiles, la BD n'est pas nécessaire.
-
 include 'header.php'; 
 include 'sidebar.php'; 
 ?>
 
 <main id="center-content">
-    <h2>Liens vers les Établissements Publics (Max 3)</h2>
+    <h2 style="color: #2E8B57;">🔗 Liens Officiels</h2>
+    <p>Ressources gouvernementales et touristiques officielles.</p>
     
-    <div class="link-item" style="display: flex; align-items: center; margin-bottom: 20px; padding: 15px; border: 1px solid #FFC72C;">
-        <img src="gouvernement.jpg" alt="Logo Gouvernement Chine" style="width: 70px; height: 70px; margin-right: 20px; border: 1px solid #ccc; background: white;">
-        <div>
-            <p style="margin:0;"><a href="http://www.gov.cn/english/" target="_blank">Portail du Gouvernement Central</a></p>
-            <p style="margin:0; font-size: 0.9em;">Informations officielles et politiques.</p>
-        </div>
-    </div>
+    <div class="links-list" style="display: flex; flex-direction: column; gap: 20px; margin-top: 20px;">
 
-    <div class="link-item" style="display: flex; align-items: center; margin-bottom: 20px; padding: 15px; border: 1px solid #FFC72C;">
-        <img src="tourismes.jfif" alt="Logo Tourisme Chine" style="width: 70px; height: 70px; margin-right: 20px; border: 1px solid #ccc; background: white;">
-        <div>
-            <p style="margin:0;"><a href="http://www.cnta.gov.cn/" target="_blank">Administration Nationale du Tourisme</a></p>
-            <p style="margin:0; font-size: 0.9em;">Guides officiels et ressources de voyage.</p>
+        <div class="link-card" style="display: flex; align-items: center; border: 1px solid #5DADE2; padding: 15px; border-radius: 8px; background: white;">
+            <img src="images/gouvernement.jpg" alt="Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
+            <div style="flex-grow: 1;">
+                <h3 style="margin: 0;"><a href="http://www.gov.cn/english/" target="_blank" style="color: #2E8B57; text-decoration: none;">Gouvernement Central</a></h3>
+                <p style="margin: 5px 0 0; color: #666;">Portail officiel et actualités politiques.</p>
+            </div>
+            <a href="http://www.gov.cn/english/" target="_blank" class="btn-secondary" style="font-size: 0.8em;">Visiter</a>
         </div>
-    </div>
 
-    <div class="link-item" style="display: flex; align-items: center; margin-bottom: 20px; padding: 15px; border: 1px solid #FFC72C;">
-        <img src="education.jpg" alt="Logo Ministère Éducation Chine" style="width: 70px; height: 70px; margin-right: 20px; border: 1px solid #ccc; background: white;">
-        <div>
-            <p style="margin:0;"><a href="http://www.moe.gov.cn/en/" target="_blank">Ministère de l'Éducation</a></p>
-            <p style="margin:0; font-size: 0.9em;">Informations sur les établissements d'enseignement supérieur.</p>
+        <div class="link-card" style="display: flex; align-items: center; border: 1px solid #5DADE2; padding: 15px; border-radius: 8px; background: white;">
+            <img src="images/tourismes.jfif" alt="Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
+            <div style="flex-grow: 1;">
+                <h3 style="margin: 0;"><a href="http://www.cnta.gov.cn/" target="_blank" style="color: #2E8B57; text-decoration: none;">Administration du Tourisme</a></h3>
+                <p style="margin: 5px 0 0; color: #666;">Guides de voyage et infos pratiques.</p>
+            </div>
+            <a href="http://www.cnta.gov.cn/" target="_blank" class="btn-secondary" style="font-size: 0.8em;">Visiter</a>
         </div>
+
+        <div class="link-card" style="display: flex; align-items: center; border: 1px solid #5DADE2; padding: 15px; border-radius: 8px; background: white;">
+            <img src="images/education.jpg" alt="Logo" style="width: 60px; height: 60px; border-radius: 50%; margin-right: 20px; object-fit: cover;">
+            <div style="flex-grow: 1;">
+                <h3 style="margin: 0;"><a href="http://www.moe.gov.cn/en/" target="_blank" style="color: #2E8B57; text-decoration: none;">Ministère de l'Éducation</a></h3>
+                <p style="margin: 5px 0 0; color: #666;">Universités et système éducatif.</p>
+            </div>
+            <a href="http://www.moe.gov.cn/en/" target="_blank" class="btn-secondary" style="font-size: 0.8em;">Visiter</a>
+        </div>
+
     </div>
-    
 </main>
+
 <?php include 'sidebar_right.php'; ?>
 <?php include 'footer.php'; ?>

@@ -1,23 +1,21 @@
 <?php 
-$page_title = "Carte de la Chine (Localisation)"; 
+$page_title = "Localisation"; 
 include 'header.php'; 
 include 'sidebar.php'; 
 ?>
 
 <main id="center-content">
-    <h2>🗺️ Localisation de la Chine (Google Maps)</h2>
+    <h2 style="color: #2E8B57;">🗺️ Carte Interactive</h2>
+    <p>Explorez la géographie de la Chine.</p>
     
-    <p>Visualisez l'emplacement de la Chine et ses frontières en utilisant la carte interactive.</p>
-    
-    <div style="margin: 20px 0; border: 1px solid #ccc; box-shadow: 0 0 10px rgba(0,0,0,0.1);">
+    <div style="border: 1px solid #ddd; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 20px;">
         <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550974.8715456334!2d103.01353102148108!3d35.63004354226388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e71887e1279%3A0x17c92b2361b9e075!2sChine!5e0!3m2!1sfr!2sma!4v1678890000000!5m2!1sfr!2sma" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26875949.673809074!2d83.56230623340578!3d35.79545466367332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31508e64e5c642c1%3A0x951daa7c349f366f!2sChine!5e0!3m2!1sfr!2sfr!4v1701980000000!5m2!1sfr!2sfr" 
             width="100%" 
             height="500" 
-            style="border:0;" 
+            style="border:0; display: block;" 
             allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
+            loading="lazy">
         </iframe>
     </div>
 </main>

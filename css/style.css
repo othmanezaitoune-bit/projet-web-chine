@@ -1,414 +1,356 @@
-/* Palette : Rouge (#D52B1E), Or (#FFC72C), Gris (#333) */
+/* --- PALETTE DE COULEURS (Thème Nature & Zen) ---
+   Vert Jade (#2E8B57) : Principal (Header, Boutons, Titres)
+   Bleu Ciel (#5DADE2) : Secondaire (Survol, Liens, Accents)
+   Gris Brume (#ECEFF1) : Fond de page (Calme, lisibilité)
+   Blanc (#FFFFFF)     : Conteneurs et Cartes
+   Gris Foncé (#333)   : Texte
+*/
+
+:root {
+    --primary: #2E8B57;      /* Jade Green */
+    --primary-dark: #1E663E; /* Jade plus foncé pour les hover */
+    --secondary: #5DADE2;    /* Sky Blue */
+    --bg-color: #ECEFF1;     /* Mist Gray */
+    --text-color: #333333;
+    --white: #ffffff;
+    --border-color: #dfe6e9;
+}
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    /* Remplacez ceci par un pattern de fond si besoin */
-    background-color: #f4f4f4; 
-    color: #333;
+    background-color: var(--bg-color); /* Fond Gris Brume */
+    color: var(--text-color);
     line-height: 1.6;
 }
 
+/* --- LAYOUT PRINCIPAL --- */
 #container {
     width: 90%;
     max-width: 1200px;
-    margin: 20px auto;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0,0,0,0.1);
-    min-height: 90vh; 
+    margin: 30px auto;
+    background-color: var(--white);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05); /* Ombre douce moderne */
+    border-radius: 8px; /* Coins arrondis pour la douceur */
+    overflow: hidden; /* Empêche les débordements */
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
 }
 
-/* --- HEADER --- */
+/* --- HEADER & BANNIÈRE --- */
 #header {
-    background-color: #333;
+    background-color: var(--white);
 }
 
 #banner {
-    /* Assurez-vous que l'image existe dans votre dossier /images/ */
+    /* Image de fond (assure-toi que le chemin est bon) */
     background-image: url('../images/grande_muraille_banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 180px;
+    height: 220px; /* Un peu plus haut pour l'ouverture */
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+}
+
+/* Filtre vert jade semi-transparent sur la bannière pour l'harmonie */
+#banner::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(46, 139, 87, 0.3), rgba(0,0,0,0.5));
 }
 
 #banner h1 {
-    color: #fff;
-    text-shadow: 2px 2px 4px #000;
-    background-color: rgba(213, 43, 30, 0.7); 
-    padding: 10px 20px;
-    border-radius: 5px;
+    color: var(--white);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    background-color: rgba(46, 139, 87, 0.85); /* Fond Jade semi-opaqe */
+    padding: 15px 30px;
+    border-radius: 50px; /* Très arrondi (Pill shape) */
+    z-index: 1;
+    font-size: 2.2em;
+    letter-spacing: 1px;
 }
 
-/* Menu Horizontal */
+/* --- MENU HORIZONTAL (TOP) --- */
 #top-menu {
-    background-color: #D52B1E; 
+    background-color: var(--primary); /* Jade Green */
     text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 #top-menu a {
     display: inline-block;
-    padding: 15px 25px;
+    padding: 18px 25px;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: background 0.3s;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1.05em;
+    transition: all 0.3s ease;
+    border-bottom: 4px solid transparent;
 }
 
 #top-menu a:hover {
-    background-color: #a31b10;
+    background-color: rgba(255,255,255,0.1);
+    color: var(--white);
 }
 
-/* --- RÈGLE : Menu Horizontal Actif --- */
+/* État Actif (Ligne Bleu Ciel) */
 #top-menu a.active {
-    background-color: #A31F17; 
-    border-bottom: 3px solid #FFC72C; 
+    background-color: var(--primary-dark);
+    border-bottom-color: var(--secondary); /* Sky Blue */
 }
 
-
-/* --- STRUCTURE GÉNÉRALE (3 COLONNES) --- */
+/* --- COLONNES (Sidebar G - Centre - Sidebar D) --- */
 #content-wrapper {
-    display: flex; /* Active le flexbox pour les trois colonnes */
-    flex: 1; 
-    min-height: 600px; /* Aide à pousser le footer vers le bas */
+    display: flex;
+    flex: 1;
 }
 
-/* --- SIDEBAR GAUCHE (left-nav) --- */
+/* Sidebar Gauche */
 #left-nav {
     width: 250px;
-    background-color: #f9f9f9;
-    border-right: 1px solid #eee;
-    padding: 20px;
+    background-color: #F9FAFB; /* Blanc très très cassé */
+    border-right: 1px solid var(--border-color);
+    padding: 25px;
     flex-shrink: 0;
 }
 
 #left-nav h3 {
-    color: #D52B1E;
-    border-bottom: 3px solid #FFC72C;
+    color: var(--primary);
+    border-bottom: 2px solid var(--secondary); /* Souligné Bleu Ciel */
     padding-bottom: 10px;
     margin-top: 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-#left-nav ul {
-    list-style: none;
-    padding: 0;
-}
+#left-nav ul { list-style: none; padding: 0; }
+#left-nav li { margin-bottom: 8px; }
 
 #left-nav a {
     display: block;
-    padding: 10px;
+    padding: 12px 15px;
     text-decoration: none;
     color: #555;
-    border-bottom: 1px solid #eee;
-    transition: padding-left 0.2s;
+    background-color: var(--white);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: all 0.2s;
 }
 
 #left-nav a:hover {
-    padding-left: 15px;
-    color: #D52B1E;
-    background-color: #fff;
+    background-color: var(--white);
+    color: var(--secondary); /* Texte devient Bleu */
+    border-color: var(--secondary);
+    transform: translateX(5px); /* Petit mouvement */
 }
 
-/* --- NOUVELLES RÈGLES : Navigation Active --- */
-
-/* Menu Horizontal Actif */
-#top-menu a.active {
-    background-color: #A31F17; 
-    border-bottom: 3px solid #FFC72C; /* Ligne d'or */
-}
-
-/* Menu Latéral Actif */
 #left-nav a.active {
-    font-weight: bold;
-    color: #D52B1E; /* Rouge Chine */
-    background-color: #f0f0f0;
-    border-left: 5px solid #FFC72C; /* Barre d'or sur le côté */
-    padding-left: 10px; /* Compense la barre */
+    background-color: var(--primary); /* Fond Jade */
+    color: var(--white); /* Texte Blanc */
+    box-shadow: 0 2px 5px rgba(46, 139, 87, 0.3);
 }
 
-/* --- RÈGLE : Menu Latéral Actif --- */
-#left-nav a.active {
-    font-weight: bold;
-    color: #D52B1E; 
-    background-color: #f0f0f0;
-    border-left: 5px solid #FFC72C; 
-    padding-left: 10px; 
-}
-
-.connect-link a {
-    background-color: #333;
-    color: #FFC72C !important;
-    text-align: center;
-    margin-top: 20px;
-    border-radius: 4px;
-}
-
-/* --- CONTENU CENTRAL (main) --- */
+/* Contenu Central */
 #center-content {
-    flex-grow: 1; /* Prend l'espace restant */
-    padding: 30px;
-    background-color: #fff;
+    flex-grow: 1;
+    padding: 40px;
+    background-color: var(--white);
 }
 
-/* --- SIDEBAR DROITE (right-side) --- */
+#center-content h2 {
+    color: var(--primary);
+    margin-top: 0;
+    font-size: 2em;
+}
+
+/* Sidebar Droite */
 #right-side {
-    width: 280px;
-    background-color: #f9f9f9;
-    border-left: 1px solid #eee;
-    padding: 20px;
+    width: 320px;
+    background-color: #F9FAFB;
+    border-left: 1px solid var(--border-color);
+    padding: 25px;
     flex-shrink: 0;
     text-align: center;
 }
 
-/* Styles pour la Vidéo et la Newsletter */
-#video-container {
-    margin-bottom: 30px;
-    background: #000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-#newsletter-form-container {
-    background: #D52B1E;
-    color: white;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-#newsletter-form-container input {
-    width: 100%; /* Corrigé pour prendre toute la largeur du conteneur */
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 3px;
-    box-sizing: border-box;
-}
-
-#newsletter-form-container button {
-    background-color: #FFC72C;
-    color: #333;
-    font-weight: bold;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
-}
-
-/* --- CORRECTION DU FORMULAIRE DE CONTACT (CRITIQUE) --- */
-
-.form-group {
-    margin-bottom: 15px; 
-    width: 100%;
-}
-
-#contactForm label {
-    display: block; /* Force le label à prendre sa propre ligne */
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-#contactForm input[type="text"], 
-#contactForm input[type="email"], 
-#contactForm textarea {
-    width: 100%; 
-    padding: 10px;
-    box-sizing: border-box; 
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-#contactForm button {
-    background-color: #D52B1E;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    display: block; /* Force le bouton sur sa propre ligne */
-    margin-top: 20px; 
-}
-
-
 /* --- FOOTER --- */
 #footer {
-    background-color: #222;
-    color: #bbb;
+    background-color: #263238; /* Gris très foncé (Blue Grey) pour le contraste */
+    color: #cfd8dc;
     text-align: center;
-    padding: 20px;
-    margin-top: auto;
+    padding: 30px;
+    border-top: 5px solid var(--primary); /* Ligne Jade */
 }
 
-#footer a {
-    color: #FFC72C;
+#bottom-menu a {
+    color: var(--secondary); /* Liens en Bleu Ciel */
     text-decoration: none;
-}
-
-/* --- Styles pour la Gestion des News (CRUD) --- */
-
-/* Formulaire d'Ajout/Modification */
-.form-crud {
-    background-color: #f9f9f9;
-    padding: 25px;
-    border: 1px solid #ddd;
-    border-top: 3px solid #D52B1E; /* Haut Rouge */
-    border-radius: 5px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.form-crud label {
-    display: block;
+    margin: 0 10px;
     font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
+}
+#bottom-menu a:hover { color: var(--white); text-decoration: underline; }
+
+/* --- ELEMENTS GENERAUX (Boutons, Formulaires, etc.) --- */
+
+/* Boutons "Call to Action" */
+button, .btn-primary, .btn-send, .btn-save, .btn-login {
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.form-crud input[type="text"], 
-.form-crud textarea {
+button:hover, .btn-primary:hover, .btn-send:hover {
+    background-color: var(--primary-dark);
+}
+
+/* Boutons secondaires / Liens de retour */
+.btn-secondary, .btn-cancel, .btn-back {
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-secondary:hover { background-color: #dcdcdc; }
+
+/* Champs de formulaires */
+input[type="text"], input[type="email"], input[type="password"], textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 12px;
+    border: 1px solid #ced6e0;
+    border-radius: 6px;
     box-sizing: border-box;
     font-family: inherit;
+    transition: border-color 0.3s;
 }
 
-.form-crud input:focus, 
-.form-crud textarea:focus {
-    border-color: #FFC72C; /* Focus Or */
+input:focus, textarea:focus {
     outline: none;
+    border-color: var(--secondary); /* Focus en Bleu Ciel */
+    box-shadow: 0 0 0 3px rgba(93, 173, 226, 0.2);
 }
 
-/* Boutons d'action */
-.btn-save {
-    background-color: #D52B1E;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
+/* --- BLOCS SPÉCIFIQUES --- */
 
-.btn-cancel {
-    background-color: #ccc;
-    color: #333;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-left: 10px;
-}
-
-.btn-add {
-    display: inline-block;
-    background-color: #28a745; /* Vert pour l'ajout */
-    color: white;
-    padding: 10px 15px;
-    text-decoration: none;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Tableau des News */
-.crud-table {
+/* Vidéo & Newsletter (Sidebar Droite) */
+#video-container {
     width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    background-color: white;
+    max-width: 300px;
+    height: 300px;
+    margin: 0 auto 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    background: #000;
+}
+#video-container video { width: 100%; height: 100%; object-fit: cover; }
+
+#newsletter-form-container {
+    background: linear-gradient(135deg, var(--primary), var(--secondary)); /* Dégradé Jade -> Bleu */
+    color: var(--white);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(46, 139, 87, 0.2);
+}
+#newsletter-form-container h3 { color: white; margin-top: 0; }
+#newsletter-form-container input { border: none; margin-bottom: 10px; }
+#newsletter-form-container button {
+    background-color: var(--white);
+    color: var(--primary); /* Texte vert */
+    width: 100%;
+}
+#newsletter-form-container button:hover { background-color: #f1f1f1; }
+
+/* Bouton Admin dans Sidebar Gauche */
+.btn-admin-sidebar {
+    background-color: #37474F; /* Gris Ardoise */
+    color: var(--secondary) !important;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.btn-admin-sidebar:hover { background-color: #263238; color: var(--white) !important; }
+
+/* --- CARDS & GALERIES (Style Unifié) --- */
+.favorite-card, .sitemap-card, .monument-card, .team-member-card, .link-card, .gallery-card {
+    background: var(--white);
+    border: 1px solid #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
 }
 
-.crud-table th {
-    background-color: #D52B1E; /* En-tête Rouge */
-    color: white;
-    padding: 12px 15px;
-    text-align: left;
+.favorite-card:hover, .sitemap-card:hover, .gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-color: var(--secondary); /* Bordure bleue au survol */
 }
 
-.crud-table td {
-    padding: 12px 15px;
-    border-bottom: 1px solid #ddd;
+/* Titres dans les cartes */
+.card-title, .sitemap-card h3, .monument-card h3, .member-info h3 {
+    color: var(--primary);
+    border-bottom-color: var(--secondary);
 }
 
-.crud-table tr:hover {
-    background-color: #f1f1f1;
+/* --- MESSAGES D'ÉTAT (Succès/Erreur) --- */
+.result-box.success, .admin-message-success {
+    background-color: #E8F5E9; /* Vert très pâle */
+    border: 1px solid var(--primary);
+    color: var(--primary-dark);
+    padding: 15px; border-radius: 6px;
 }
 
-.crud-actions button {
-    cursor: pointer;
+/* --- CORRECTION : MESSAGES D'ERREUR --- */
+
+/* 1. Grosses boîtes d'erreur (Pour Login, Confirmation d'envoi...) */
+.result-box.error, .admin-message-error {
+    background-color: #FFEBEE; /* Fond rouge pâle */
+    border: 1px solid #e57373;
+    color: #c62828;
+    padding: 15px; 
+    border-radius: 6px;
+    margin-bottom: 20px;
 }
 
-/* --- Styles Modernes pour le Plan du Site --- */
-
-/* 1. En-tête de la section centrale */
-.sitemap-header {
-    margin-bottom: 25px;
-    border-bottom: 2px solid #eee;
-    padding-bottom: 15px;
+/* 2. Petits messages de validation (Pour le Formulaire Contact) */
+.error-message {
+    color: #c62828; /* Texte rouge uniquement */
+    font-size: 0.85em;
+    margin-top: 5px;
+    font-weight: 600;
+    display: block;
+    min-height: 0; /* Important pour ne pas prendre de place si vide */
+    
+    /* On annule explicitement le style "boîte" */
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
-.sitemap-header h2 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333;
-    font-size: 24px;
-    margin-bottom: 5px;
-}
+/* --- CORRECTION : PLAN DU SITE (Style manquant) --- */
 
-.sitemap-header p {
-    color: #666;
-    font-style: italic;
-    font-size: 14px;
-}
-
-/* 2. Grille de cartes (Responsive) */
-.sitemap-container {
-    display: grid;
-    /* Crée des colonnes automatiques : minimum 250px de large */
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-    gap: 20px; /* Espace entre les cartes */
-}
-
-/* 3. Style des Cartes (Les boites blanches) */
-.sitemap-card {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px; /* Coins arrondis */
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Ombre légère */
-    transition: transform 0.2s ease;
-}
-
-.sitemap-card:hover {
-    transform: translateY(-3px); /* Petite animation au survol */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.sitemap-card h3 {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-size: 18px;
-    color: #b71c1c; /* Rouge foncé pour rappeler le thème */
-    border-bottom: 2px solid #b71c1c;
-    display: inline-block;
-    padding-bottom: 3px;
-}
-
-.card-icon {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-/* 4. Style de la liste et des liens */
+/* La liste des liens */
 .sitemap-list {
-    list-style: none; /* Enlève les puces noires moches */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -417,235 +359,156 @@ body {
     margin-bottom: 8px;
 }
 
+/* Le style des boutons-liens */
 .sitemap-list a {
-    display: block; /* Rend tout le lien cliquable */
+    display: block; /* Prend toute la largeur disponible */
+    padding: 10px 15px;
     text-decoration: none;
-    color: #444;
-    padding: 8px 10px;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    border-left: 3px solid transparent; /* Bordure invisible par défaut */
-    transition: all 0.3s ease;
-    font-size: 14px;
-}
-
-/* Effet au survol de la souris */
-.sitemap-list a:hover {
-    background-color: #fff0f0; /* Fond rouge très pâle */
-    border-left: 3px solid #d32f2f; /* Barre rouge à gauche */
-    color: #d32f2f;
-    padding-left: 15px; /* Petit décalage vers la droite */
-}
-
-/* Lien de la page active */
-.sitemap-list a.current-page {
-    font-weight: bold;
-    color: #888;
-    background: none;
-    cursor: default;
-}
-
-/* --- Styles Modernes pour le Plan du Site (CORRIGÉ) --- */
-
-/* 1. En-tête de la section centrale */
-.sitemap-header {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
-    text-align: center; /* On centre le titre pour faire plus propre */
-}
-
-.sitemap-header h2 {
-    color: #D52B1E; /* Rouge du thème */
-    font-size: 28px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.sitemap-header p {
-    color: #666;
-    font-size: 15px;
-}
-
-/* 2. Grille de cartes (Correction de la largeur) */
-.sitemap-container {
-    display: grid;
-    /* J'ai passé le minmax à 180px pour que ça rentre sur 3 colonnes */
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
-    gap: 20px;
-    align-items: start; /* Empêche les cartes de s'étirer bizarrement */
-}
-
-/* 3. Style des Cartes */
-.sitemap-card {
-    background-color: #fff;
+    color: #555; /* Gris foncé pour le texte */
+    background-color: #F9FAFB; /* Fond très clair */
     border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-    transition: transform 0.2s ease;
-    text-align: center; /* Centre le titre et l'icône */
-}
-
-.sitemap-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    border-color: #FFC72C; /* Bordure or au survol */
-}
-
-.card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    display: block;
-}
-
-.sitemap-card h3 {
-    margin: 10px 0 20px 0;
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    border-bottom: 2px solid #FFC72C; /* Soulignement or */
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-/* 4. Style de la liste et des liens */
-.sitemap-list {
-    list-style: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    text-align: left; /* On remet la liste alignée à gauche pour la lecture */
-}
-
-.sitemap-list li {
-    margin-bottom: 8px;
-}
-
-/* J'utilise #center-content devant pour forcer la priorité du style */
-#center-content .sitemap-list a {
-    display: block;
-    text-decoration: none !important; /* Force la suppression du souligné */
-    color: #555 !important; /* Force la couleur grise */
-    padding: 8px 12px;
-    background-color: #f8f8f8;
+    border-left: 4px solid transparent; /* Prépare la bordure colorée */
     border-radius: 4px;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    border-left: 3px solid transparent;
+    transition: all 0.2s ease;
+    font-weight: 500;
 }
 
-/* Effet au survol */
-#center-content .sitemap-list a:hover {
-    background-color: #fff5f5; /* Fond rouge très pâle */
-    color: #D52B1E !important; /* Texte rouge */
-    border-left: 3px solid #D52B1E; /* Barre rouge à gauche */
-    padding-left: 18px; /* Décalage */
+/* Effet au survol (Hover) */
+.sitemap-list a:hover {
+    background-color: #E8F5E9; /* Vert très pâle */
+    color: var(--primary); /* Texte Vert Jade */
+    border-left-color: var(--secondary); /* Barre Bleu Ciel à gauche */
+    transform: translateX(5px); /* Petit mouvement vers la droite */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* Lien de la page active */
-#center-content .sitemap-list a.current-page {
-    font-weight: bold;
-    color: #999 !important;
-    background: none;
+/* Lien de la page active (celle où on est) */
+.sitemap-list a.current-page {
+    background-color: var(--primary);
+    color: white;
+    border-left-color: var(--primary-dark);
     cursor: default;
-    border: none;
-    padding-left: 12px;
+    transform: none;
 }
 
-/* --- ACCUEIL : PHOTOS COUPS DE CŒUR (AJUSTÉ) --- */
+/* --- CORRECTION : BARRE DE RECHERCHE (all_news.php) --- */
 
-.favorites-list {
+.search-bar-form {
+    background-color: #f4f6f8; /* Fond gris très clair */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+
+    /* MAGIE FLEXBOX : Tout sur une ligne */
     display: flex;
-    flex-direction: column; /* Empile les images verticalement */
-    align-items: center;    /* CENTRE les images dans la colonne */
-    gap: 30px;              /* Espace un peu réduit entre les blocs */
-    margin-top: 20px;
-    margin-bottom: 40px;
+    flex-direction: row; 
+    align-items: center; 
+    gap: 15px; /* Espace entre Label, Input et Bouton */
 }
 
-.favorite-card {
-    display: block;
-    text-decoration: none;
-    width: 100%;            /* Prend la largeur disponible... */
-    max-width: 450px;       /* ...MAIS s'arrête à 450px (taille idéale) */
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-    
-    /* Ombre légère par défaut */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-    
-    /* Transition fluide pour le mouvement et l'ombre */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
-
-/* L'IMAGE */
-.favorite-card img {
-    width: 100%;
-    height: 500px; 
-    display: block;
-    /* On enlève le zoom sur l'image pour alléger l'effet */
-    transition: opacity 0.3s ease;
-}
-
-/* LE TITRE SOUS L'IMAGE */
-.card-title {
-    padding: 12px;
-    text-align: center;
-    font-size: 1.1em;
+.search-bar-form label {
     font-weight: bold;
     color: #333;
-    border-bottom: 3px solid #D52B1E;
-    background-color: #fff;
-    transition: color 0.3s ease;
+    white-space: nowrap; /* Empêche "Rechercher :" de se couper */
+    margin: 0;
 }
 
-/* --- NOUVELLE ANIMATION (Lévitation) --- */
-
-.favorite-card:hover {
-    /* Au lieu de grossir, la carte "monte" de 8 pixels */
-    transform: translateY(-8px); 
-    
-    /* L'ombre devient plus diffuse en bas pour simuler la hauteur */
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2); 
+.search-bar-form input[type="text"] {
+    flex-grow: 1; /* L'input prend toute la largeur disponible */
+    width: auto;  /* IMPORTANT : Annule le width: 100% global qui cassait la ligne */
+    margin: 0;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.favorite-card:hover .card-title {
-    color: #D52B1E; /* Le texte passe au rouge */
-}
-
-.favorite-card:hover img {
-    opacity: 0.9; /* Petit effet de lumière subtil */
-}
-
-/* --- MODIFICATION DE LA SIDEBAR DROITE --- */
-#right-side {
-    /* On passe de 280px à 320px pour que la vidéo de 300px rentre */
-    width: 320px; 
-    background-color: #f9f9f9;
-    border-left: 1px solid #eee;
-    padding: 20px;
-    flex-shrink: 0;
-    text-align: center;
-}
-
-/* --- MODIFICATION DE LA VIDÉO (300x300) --- */
-#video-container {
-    width: 300px;  /* Largeur imposée */
-    height: 300px; /* Hauteur imposée */
-    margin: 0 auto 30px auto; /* Centré horizontalement */
-    background: #000;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    overflow: hidden; /* Coupe ce qui dépasse si nécessaire */
-}
-
-/* Force l'élément vidéo (ou iframe Youtube) à prendre toute la place */
-#video-container iframe, 
-#video-container video, 
-#video-container object {
-    width: 300px;
-    height: 300px;
+.search-bar-form button {
+    background-color: var(--primary); /* Vert Jade */
+    color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.2em;
+    flex-shrink: 0; /* Empêche le bouton de s'écraser */
+    transition: background 0.3s;
+}
+
+.search-bar-form button:hover {
+    background-color: var(--primary-dark);
+}
+
+.reset-link {
+    color: #c62828;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.reset-link:hover {
+    text-decoration: underline;
+}
+
+/* --- CORRECTIONS FINALES --- */
+
+/* 1. Plan du Site : Retour du style "Cartes" */
+.sitemap-list { list-style: none; padding: 0; margin: 0; }
+.sitemap-list li { margin-bottom: 8px; }
+.sitemap-list a {
     display: block;
+    padding: 10px 15px;
+    background-color: #F9FAFB;
+    border: 1px solid #eee;
+    border-left: 4px solid transparent;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #555;
+    transition: all 0.2s;
+}
+.sitemap-list a:hover {
+    background-color: #E8F5E9; /* Vert pâle */
+    color: #2E8B57;
+    border-left-color: #5DADE2; /* Bleu */
+    transform: translateX(5px);
+}
+.sitemap-list a.current-page {
+    background-color: #2E8B57;
+    color: white;
+    border-left-color: #1E663E;
+}
+
+/* 2. Contact : Supprimer les boîtes rouges vides */
+.error-message {
+    color: #c62828;
+    font-size: 0.85em;
+    margin-top: 5px;
+    font-weight: bold;
+    display: block;
+    background: transparent; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    padding: 0;
+}
+
+/* 3. Recherche : Alignement sur une ligne */
+.search-bar-form {
+    background-color: #f4f6f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: nowrap; /* Force la ligne unique */
+}
+.search-bar-form label {
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    white-space: nowrap; /* Empêche le texte de se couper */
+}
+.search-bar-form input {
+    flex-grow: 1;
+    margin: 0;
 }

@@ -8,7 +8,7 @@ include 'sidebar.php';
     <h2>⛰️ Coup de Cœur #2 : Les Pics Karstiques de Guilin</h2>
     
     <div style="margin-bottom: 20px;">
-        <img src="The mountains of Guilin are not as grand as those….jfif" alt="Montagnes Karstiques de Guilin" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+        <img src="images/The mountains of Guilin are not as grand as those….jfif" alt="Montagnes Karstiques de Guilin" style="max-width: 100%; height: auto; border: 1px solid #ccc;">
     </div>
     
     <h3>Description</h3>
