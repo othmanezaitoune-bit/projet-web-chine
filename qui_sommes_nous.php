@@ -30,7 +30,7 @@ include 'sidebar.php';
         
         <div class="team-member-card" style="display: flex; align-items: center; gap: 20px; padding: 20px; border: 1px solid #ddd; border-radius: 8px;">
             <div class="member-photo">
-                <img src="images/Ali.jpg" alt="Etudiant 2" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #2E8B57; object-fit: cover;">
+                <img src="images/Ali.jpeg" alt="Etudiant 2" style="width: 100px; height: 100px; border-radius: 50%; border: 3px solid #2E8B57; object-fit: cover;">
             </div>
             <div class="member-info">
                 <h3 style="margin: 0 0 10px 0; color: #2E8B57;">Membre 2</h3>
