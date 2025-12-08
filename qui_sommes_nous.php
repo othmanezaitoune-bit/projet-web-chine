@@ -8,7 +8,7 @@ include 'sidebar.php';
     
     <div class="about-header" style="border-bottom: 1px solid #eee; margin-bottom: 30px;">
         <h2 style="color: #2E8B57;">👤 L'Équipe du Projet</h2>
-        <p>Ce site a été réalisé par le binôme suivant dans le cadre du module "Techniques Web".</p>
+        <p>Ce site a été réalisé par le binôme suivant dans le cadre du module "Programmation Web".</p>
     </div>
     
     <div class="team-container" style="display: flex; flex-direction: column; gap: 30px;">
@@ -22,8 +22,8 @@ include 'sidebar.php';
                 <ul style="list-style: none; padding: 0; margin: 0;">
                     <li><strong>Nom :</strong> ZAITOUNE</li>
                     <li><strong>Prénom :</strong>OTHMANE</li>
-                    <li><strong>CNE :</strong> CNE DU BINÔME</li>
-                    <li><strong>Email :</strong> <a href="mailto:email@etu.ma" style="color: #5DADE2;">votre.email@etu.ma</a></li>
+                    <li><strong>CNE :</strong> N149028261</li>
+                    <li><strong>Email :</strong> <a href="mailto:email@etu.ma" style="color: #5DADE2;">othmane.zaitoune@etu.ma</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +38,7 @@ include 'sidebar.php';
                     <li><strong>Nom :</strong> RAGHOULI</li>
                     <li><strong>Prénom :</strong> ALI</li>
                     <li><strong>CNE :</strong> R130188952</li>
-                    <li><strong>Email :</strong> <a href="mailto:email2@etu.ma" style="color: #5DADE2;">binome.email@etu.ma</a></li>
+                    <li><strong>Email :</strong> <a href="mailto:email2@etu.ma" style="color: #5DADE2;">ali.raghouli@etu.ma</a></li>
                 </ul>
             </div>
         </div>
