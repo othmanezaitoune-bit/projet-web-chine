@@ -20,7 +20,17 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-color); /* Fond Gris Brume */
+    
+    /* --- CONFIGURATION DU FOND GIF --- */
+    /* Assurez-vous que le fichier s'appelle bien 'background.gif' dans le dossier images */
+    background-image: url('../images/background2.gif'); 
+    
+    background-color: var(--bg-color); /* Couleur de secours si le GIF ne charge pas */
+    background-attachment: fixed;      /* Le fond reste fixe pendant le scroll (Effet Parallaxe) */
+    background-size: cover;            /* Le GIF couvre tout l'écran sans se répéter */
+    background-position: center;       /* Centre le GIF */
+    background-repeat: no-repeat;
+    
     color: var(--text-color);
     line-height: 1.6;
 }

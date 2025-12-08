@@ -16,11 +16,13 @@ include '../header.php';
 ?>
 
 <main id="center-content">
-    <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 20px;">
-        <h2 style="color: #2E8B57; margin: 0;">Boîte de Réception</h2>
-        <div>
-            <a href="news_management.php" class="btn-secondary">Gérer les News</a>
-            <a href="logout.php" style="margin-left: 10px; color: #c62828; text-decoration: none; font-weight: bold;">Déconnexion</a>
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; border-bottom: 2px solid #2E8B57; padding-bottom: 15px;">
+        <h2 style="color: #2E8B57; margin: 0;">Administration</h2>
+        <div style="display: flex; gap: 10px;">
+            <a href="news_management.php" class="btn-secondary">Gérer News</a>
+            <a href="messages.php" class="btn-secondary">Messages</a>
+            <a href="newsletter_list.php" class="btn-secondary">Inscrits Newsletter</a>
+            <a href="logout.php" style="margin-left: 10px; color: #c62828; font-weight: bold; text-decoration: none; display: flex; align-items: center;">Déconnexion</a>
         </div>
     </div>
 
