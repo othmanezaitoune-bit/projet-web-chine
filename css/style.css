@@ -522,3 +522,58 @@ input:focus, textarea:focus {
     flex-grow: 1;
     margin: 0;
 }
+
+/* --- RESPONSIVE DESIGN (Adaptation Mobile & Tablette) --- */
+
+/* Quand l'écran fait moins de 900 pixels de large */
+@media screen and (max-width: 900px) {
+    
+    /* 1. On empile les colonnes verticalement */
+    #content-wrapper {
+        flex-direction: column;
+    }
+
+    /* 2. Chaque colonne prend toute la largeur */
+    #left-nav, 
+    #center-content, 
+    #right-side {
+        width: 100%;
+        max-width: none; /* Annule les limites de largeur */
+        box-sizing: border-box; /* S'assure que le padding ne dépasse pas */
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #ddd; /* Petit trait de séparation */
+    }
+
+    /* 3. Ajustement de l'ordre (Optionnel) */
+    /* Si tu veux que le contenu apparaisse AVANT le menu de gauche sur mobile, décommente ceci : */
+    /*
+    #center-content { order: 1; }
+    #left-nav { order: 2; }
+    #right-side { order: 3; }
+    */
+
+    /* 4. Ajustements cosmétiques pour mobile */
+    #banner h1 {
+        font-size: 1.5em; /* Titre plus petit */
+        width: 80%;       /* Moins large */
+        text-align: center;
+    }
+
+    #top-menu a {
+        display: block;          /* Les liens du menu haut s'empilent */
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        padding: 10px;
+    }
+
+    .gallery-grid, 
+    .favorites-list {
+        justify-content: center; /* Centre les images */
+    }
+    
+    /* On s'assure que les tableaux ne dépassent pas */
+    .table-container {
+        width: 100%;
+        overflow-x: scroll; /* Ajoute un scroll horizontal si le tableau est trop grand */
+    }
+}
