@@ -18,11 +18,13 @@ include 'sidebar.php';
 
     <h3>Pourquoi ce coup de cœur ?</h3>
     <ul>
-        <li>**Symbole National :** Le panda est un trésor national de la Chine et un symbole mondial de la conservation.</li>
-        <li>**Efforts de Conservation :** Le site met en lumière les efforts intensifs de reproduction et de réintroduction de l'espèce.</li>
+        <li><strong>Symbole National :</strong> Le panda est un trésor national de la Chine et un symbole mondial de la conservation.</li>
+        <li><strong>Efforts de Conservation :</strong> Le site met en lumière les efforts intensifs de reproduction et de réintroduction de l'espèce.</li>
     </ul>
 
-    <p style="margin-top: 30px;"><a href="index.php">&larr; Retour à l'accueil</a></p>
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+            <a href="index.php" class="btn-secondary">&larr; Retour</a>
+        </div>
 </main>
 
 <?php include 'sidebar_right.php'; ?>

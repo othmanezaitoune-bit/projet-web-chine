@@ -18,11 +18,13 @@ include 'sidebar.php';
 
     <h3>Pourquoi ce coup de cœur ?</h3>
     <ul>
-        <li>**Unicité Géologique :** Ces formations sont le résultat de millions d'années d'érosion par l'eau sur le calcaire.</li>
-        <li>**Cruises sur la Rivière Li :** Le meilleur moyen de profiter de ce paysage spectaculaire est une croisière le long de la rivière Li.</li>
+        <li><strong>Unicité Géologique :</strong> Ces formations sont le résultat de millions d'années d'érosion par l'eau sur le calcaire.</li>
+        <li><strong>Cruises sur la Rivière Li :</strong> Le meilleur moyen de profiter de ce paysage spectaculaire est une croisière le long de la rivière Li.</li>
     </ul>
 
-    <p style="margin-top: 30px;"><a href="index.php">&larr; Retour à l'accueil</a></p>
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #eee;">
+            <a href="index.php" class="btn-secondary">&larr; Retour</a>
+        </div>
 </main>
 
 <?php include 'sidebar_right.php'; ?>
