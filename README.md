@@ -2,7 +2,7 @@
 
 **Version :** 1.0.0
 **Cours :** Techniques Web et Multimédia
-
+**Auteurs :** othmanezaitoune-bit & ali14p
 ---
 
 ## 📖 Description
