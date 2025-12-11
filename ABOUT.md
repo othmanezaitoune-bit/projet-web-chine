@@ -1,7 +1,7 @@
 # ℹ️ À propos du projet "Bienvenue en Chine"
 
 ## 🎓 Contexte Académique
-Ce projet a été développé dans le cadre du module universitaire **"Techniques Web et Multimédia"**. L'objectif pédagogique était de concevoir une application web dynamique complète (Full-Stack) **sans utiliser de frameworks** (comme Laravel ou Symfony), afin de maîtriser les fondamentaux du langage PHP et les interactions avec une base de données relationnelle.
+Ce projet a été développé dans le cadre du module universitaire **"Programmation Web"**. L'objectif pédagogique était de concevoir une application web dynamique complète (Full-Stack) **sans utiliser de frameworks** (comme Laravel ou Symfony), afin de maîtriser les fondamentaux du langage PHP et les interactions avec une base de données relationnelle.
 
 ## 💡 Philosophie de Conception
 
